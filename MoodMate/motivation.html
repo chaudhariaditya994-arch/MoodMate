@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation - MoodMate</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="app-shell auth-shell">
+        <header class="topbar">
+            <button class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+            <div class="topbar-title">
+                <span>Daily Motivation</span>
+                <small>Discover quotes and tips that match your mood.</small>
+            </div>
+            <button id="signOutBtn" class="icon-btn" title="Sign out">⎋</button>
+        </header>
+
+        <main class="page-grid single-column">
+            <section class="card motivation-card">
+                <div class="section-header">
+                    <h1>Find your mindset boost</h1>
+                    <p class="section-copy">Choose a mood below to see motivational quotes, calming reminders, and action tips designed to help you win your day.</p>
+                </div>
+
+                <div class="motivation-filter">
+                    <button type="button" class="active" data-mood="Calm">Calm</button>
+                    <button type="button" data-mood="Neutral">Neutral</button>
+                    <button type="button" data-mood="Sad">Sad</button>
+                </div>
+
+                <div class="motivation-content">
+                    <div class="motivation-section">
+                        <h2 id="motivationHeader">Calm Motivation</h2>
+                        <ul id="motivationalQuotes" class="motivation-list"></ul>
+                    </div>
+
+                    <div class="motivation-section">
+                        <h2>Actionable tips</h2>
+                        <ul id="motivationTips" class="motivation-list"></ul>
+                    </div>
+                </div>
+
+                <a href="index.html" class="link-button back-link">← Back to Mood Tracker</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

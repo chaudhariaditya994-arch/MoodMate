@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodMate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <button class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+            <div class="topbar-title">
+                <span>MoodMate</span>
+                <small>Your daily mood companion</small>
+            </div>
+            <button id="signOutBtn" class="icon-btn" title="Sign out">⎋</button>
+        </header>
+
+        <main class="page-grid">
+            <section class="card mood-card">
+                <div class="section-header">
+                    <p class="eyebrow">Check-in</p>
+                    <h1>How are you feeling today?</h1>
+                </div>
+
+                <p class="section-copy">Choose the emoji that best matches your current mood.</p>
+
+                <div class="emoji-grid" id="moodOptions">
+                    <button type="button" class="emoji-btn" data-mood="Calm" aria-pressed="false">
+                        <span class="emoji">😊</span>
+                        <span>Calm</span>
+                    </button>
+                    <button type="button" class="emoji-btn" data-mood="Neutral" aria-pressed="false">
+                        <span class="emoji">😐</span>
+                        <span>Neutral</span>
+                    </button>
+                    <button type="button" class="emoji-btn" data-mood="Sad" aria-pressed="false">
+                        <span class="emoji">😢</span>
+                        <span>Sad</span>
+                    </button>
+                </div>
+
+                <button id="saveMoodBtn" class="primary-btn">Save Mood</button>
+            </section>
+
+            <section class="card summary-card">
+                <div class="greeting-row">
+                    <p class="eyebrow">Good Morning, <span id="userName">Fahmi</span></p>
+                </div>
+                <div class="status-card">
+                    <div class="status-left">
+                        <span class="eyebrow">Mood Today</span>
+                        <h2 id="todayMoodLabel">Neutral</h2>
+                        <p id="todayMoodMessage">Thanks for checking in! Keep going.</p>
+                    </div>
+                    <div class="status-emoji" id="todayMoodEmoji">😐</div>
+                </div>
+
+                <div class="mood-quote-card">
+                    <p class="quote-text" id="moodQuote">Choose how you feel and get a motivating quote tailored to your mood.</p>
+                </div>
+
+                <div class="week-summary">
+                    <div class="week-title">
+                        <span>Your Mood This Week</span>
+                        <a href="about.html" class="link-button">Personal Details</a>
+                    </div>
+                    <div id="weekMoodList" class="week-list"></div>
+                </div>
+            </section>
+
+            <section class="card talk-card">
+                <div class="section-header">
+                    <h2>Want to talk about it?</h2>
+                </div>
+                <p class="section-copy">Tell me how your day is going or ask for advice.</p>
+                <textarea id="moodJournal" placeholder="Type how you feel..." rows="4"></textarea>
+                <button id="saveJournalBtn" class="secondary-btn">Save Journal Note</button>
+            </section>
+
+            <section class="card insights-card">
+                <div class="insights-header">
+                    <h2>Insights</h2>
+                    <select id="insightRange">
+                        <option>This month</option>
+                        <option>This week</option>
+                    </select>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="chart-bar">
+                        <span class="bar-label">Positive</span>
+                        <div class="bar-track"><div id="positiveBar" class="bar-fill"></div></div>
+                    </div>
+                    <div class="chart-bar">
+                        <span class="bar-label">Neutral</span>
+                        <div class="bar-track"><div id="neutralBar" class="bar-fill neutral"></div></div>
+                    </div>
+                    <div class="chart-bar">
+                        <span class="bar-label">Negative</span>
+                        <div class="bar-track"><div id="negativeBar" class="bar-fill negative"></div></div>
+                    </div>
+                </div>
+
+                <a href="motivation.html" class="secondary-btn full-width">Open Daily Motivation</a>
+                <div class="insight-note" id="insightNote">You feel most happy on Fridays!</div>
+            </section>
+        </main>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

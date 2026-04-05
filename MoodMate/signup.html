@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - MoodMate</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="app-shell auth-shell">
+        <header class="topbar">
+            <div class="topbar-title">
+                <span>Create Account</span>
+                <small>Start tracking your mood today</small>
+            </div>
+        </header>
+
+        <main class="page-grid single-column">
+            <section class="card auth-card">
+                <div class="section-header">
+                    <h1>Sign Up</h1>
+                </div>
+                <p class="section-copy">Create a new account or continue with Google.</p>
+
+                <form id="signupForm" onsubmit="return false;">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" name="name" placeholder="Your Name" required>
+
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" placeholder="you@example.com" required>
+
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" placeholder="Create a password" required>
+
+                    <button id="signupBtn" class="primary-btn">Create Account</button>
+                </form>
+
+                <div class="divider"><span>or</span></div>
+                <div id="googleSignUpBtn" class="google-button">Sign up with Google</div>
+
+                <p class="auth-footer">Already registered? <a href="login.html">Sign in</a></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
